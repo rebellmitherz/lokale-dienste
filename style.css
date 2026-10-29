@@ -1,0 +1,246 @@
+/* ============================================================
+   [FIRMENNAME] – Lokale Dienste
+   Farbwelt: Petrol/Dunkelgrün (#123332), warmes Sand, Weiß,
+   Akzent: kräftiges Grün für Buttons, WhatsApp-Grün.
+   Große, gut lesbare Schrift (Zielgruppe: ältere Menschen).
+   ============================================================ */
+:root{
+  --petrol:#123332;
+  --petrol-dark:#0b2423;
+  --petrol-soft:#1d4a47;
+  --ink:#1c2420;
+  --muted:#48554e;
+  --accent:#1c7a4d;
+  --accent-dark:#145c3a;
+  --wa:#1faa55;
+  --wa-dark:#178a43;
+  --sand:#f4efe6;
+  --sand-dark:#e9e1d0;
+  --bg:#faf8f3;
+  --card:#ffffff;
+  --line:#ddd6c6;
+  --radius:14px;
+  --shadow:0 6px 24px rgba(18,51,50,.10);
+  --shadow-lg:0 14px 40px rgba(18,51,50,.18);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  font-size:18px;
+  color:var(--ink);
+  background:var(--bg);
+  line-height:1.65;
+}
+img{max-width:100%;display:block}
+a{color:var(--accent-dark);text-decoration:none}
+a:hover{text-decoration:underline}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+h1{font-size:2.35rem;line-height:1.2;margin:0 0 14px;letter-spacing:-.01em}
+h2{font-size:1.75rem;line-height:1.25;margin:0 0 14px;color:var(--petrol)}
+h3{font-size:1.15rem;margin:0 0 6px;color:var(--petrol)}
+p{margin:0 0 14px}
+.small{font-size:.95rem;color:var(--muted)}
+.lead{font-size:1.18rem}
+section{padding:46px 0 8px}
+section.band{background:var(--sand);margin-top:46px;padding:40px 0 46px}
+section.band-petrol{background:var(--petrol);color:#eef4f1;margin-top:46px;padding:44px 0 50px}
+section.band-petrol h2{color:#fff}
+section.band-petrol a{color:#bfe3cd}
+
+/* ---------- Kopfzeile ---------- */
+header.site{
+  background:var(--petrol);
+  color:#fff;
+  position:sticky;top:0;z-index:60;
+  box-shadow:0 2px 14px rgba(0,0,0,.25);
+}
+header.site .wrap{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;padding-top:13px;padding-bottom:13px}
+.logo{font-weight:800;font-size:1.3rem;color:#fff;line-height:1.25}
+.logo:hover{text-decoration:none}
+.logo small{display:block;font-weight:400;font-size:.82rem;color:#c4d8d2}
+nav.main{display:flex;gap:6px;flex-wrap:wrap}
+nav.main a{color:#e7f0ec;font-size:.98rem;padding:7px 10px;border-radius:8px}
+nav.main a:hover{background:var(--petrol-soft);text-decoration:none}
+.tel{
+  font-weight:800;white-space:nowrap;color:#fff;font-size:1.12rem;
+  background:var(--accent);padding:10px 16px;border-radius:10px;
+}
+.tel:hover{background:var(--accent-dark);text-decoration:none}
+
+/* ---------- Buttons ---------- */
+.btn{
+  display:inline-flex;align-items:center;gap:9px;
+  padding:15px 26px;border-radius:12px;font-weight:700;font-size:1.05rem;
+  border:2px solid transparent;cursor:pointer;transition:transform .12s ease, background .12s ease;
+}
+.btn:hover{text-decoration:none;transform:translateY(-1px)}
+.btn-wa{background:var(--wa);color:#fff}
+.btn-wa:hover{background:var(--wa-dark)}
+.btn-call{background:#fff;color:var(--petrol);border-color:#fff}
+.btn-call:hover{background:var(--sand)}
+.btn-accent{background:var(--accent);color:#fff}
+.btn-accent:hover{background:var(--accent-dark)}
+.btn-ghost{background:transparent;color:#fff;border-color:rgba(255,255,255,.75)}
+.btn-ghost:hover{background:rgba(255,255,255,.12)}
+.btn-ghost-dark{background:#fff;color:var(--petrol);border-color:var(--petrol)}
+.btn-ghost-dark:hover{background:var(--sand)}
+.cta-row{display:flex;gap:12px;flex-wrap:wrap;margin:20px 0 6px}
+
+/* ---------- Hero ---------- */
+.hero{
+  position:relative;color:#fff;overflow:hidden;
+  background:linear-gradient(120deg,var(--petrol) 0%,var(--petrol-soft) 100%);
+}
+.hero img.hero-bg{
+  position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;
+}
+.hero::after{
+  content:"";position:absolute;inset:0;z-index:1;
+  background:linear-gradient(90deg,rgba(11,36,35,.88) 0%,rgba(11,36,35,.72) 52%,rgba(11,36,35,.35) 100%);
+}
+.hero .wrap{position:relative;z-index:2;padding-top:74px;padding-bottom:74px}
+.hero h1{color:#fff;max-width:760px;text-shadow:0 2px 14px rgba(0,0,0,.25)}
+.hero p.lead{color:#e6efeb;max-width:680px;margin-bottom:8px}
+.hero .hero-kicker{
+  display:inline-block;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.4);
+  padding:5px 14px;border-radius:999px;font-size:.95rem;font-weight:600;margin-bottom:18px;
+}
+.hero-sm .wrap{padding-top:52px;padding-bottom:52px}
+.hero-sm h1{font-size:2rem}
+
+/* ---------- Vertrauens-Leiste ---------- */
+.trust{
+  background:#fff;border-bottom:1px solid var(--line);
+}
+.trust .wrap{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+  gap:8px 26px;padding-top:20px;padding-bottom:20px;
+}
+.trust .t-item{display:flex;gap:11px;align-items:flex-start;font-weight:600;font-size:1.02rem;color:var(--petrol)}
+.trust .t-item span{color:var(--muted);font-weight:400;display:block;font-size:.95rem}
+.check-mark{
+  flex:0 0 auto;width:30px;height:30px;border-radius:50%;
+  background:var(--accent);color:#fff;font-weight:800;
+  display:flex;align-items:center;justify-content:center;font-size:1rem;margin-top:2px;
+}
+
+/* ---------- Karten / Dienste ---------- */
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:22px;margin:22px 0 8px}
+.card{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  overflow:hidden;box-shadow:var(--shadow);display:flex;flex-direction:column;
+  transition:transform .15s ease, box-shadow .15s ease;
+}
+.card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg)}
+.card img{height:190px;width:100%;object-fit:cover}
+.card .card-body{padding:20px 22px 22px;display:flex;flex-direction:column;flex:1}
+.card p{margin:6px 0 12px;color:var(--muted)}
+.card .price{font-weight:800;color:var(--petrol);font-size:1.05rem;margin-top:auto;padding-top:6px}
+.card .more{font-weight:700;margin-top:8px}
+
+/* ---------- Ablauf-Schritte ---------- */
+.steps{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+  gap:20px;margin:22px 0 8px;padding:0;list-style:none;counter-reset:step;
+}
+.steps li{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  padding:24px 20px 18px;box-shadow:var(--shadow);position:relative;
+}
+.steps li::before{
+  counter-increment:step;content:counter(step);
+  display:flex;align-items:center;justify-content:center;
+  background:var(--petrol);color:#fff;font-weight:800;font-size:1.25rem;
+  width:46px;height:46px;border-radius:50%;margin-bottom:12px;
+  border:3px solid var(--sand-dark);
+}
+.steps strong{font-size:1.08rem;color:var(--petrol)}
+.steps p{margin:5px 0 0;color:var(--muted);font-size:.98rem}
+
+/* ---------- Preise ---------- */
+table.prices{
+  width:100%;border-collapse:collapse;background:#fff;
+  border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;
+  margin:16px 0;box-shadow:var(--shadow);font-size:1.02rem;
+}
+table.prices th,table.prices td{padding:14px 18px;text-align:left;border-bottom:1px solid var(--line)}
+table.prices tr:last-child td{border-bottom:0}
+table.prices th{background:var(--petrol);color:#fff;font-size:1.02rem}
+table.prices td:last-child{font-weight:700;white-space:nowrap}
+.price-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px;margin:18px 0 6px}
+.price-card{
+  background:#fff;border:2px solid var(--petrol);border-radius:var(--radius);
+  padding:22px;text-align:center;box-shadow:var(--shadow);
+}
+.price-card .amount{font-size:1.65rem;font-weight:800;color:var(--petrol);display:block;line-height:1.2}
+.price-card .lbl{color:var(--muted);font-size:.98rem}
+.note{
+  background:var(--sand);border:1px solid var(--sand-dark);border-left:6px solid var(--petrol);
+  border-radius:10px;padding:18px 20px;margin:18px 0;
+}
+
+/* ---------- Listen ---------- */
+ul.check{list-style:none;padding:0;margin:12px 0}
+ul.check li{margin:11px 0;padding-left:36px;position:relative}
+ul.check li::before{
+  content:"✓";position:absolute;left:0;top:1px;
+  width:25px;height:25px;border-radius:50%;background:var(--accent);color:#fff;
+  font-size:.85rem;font-weight:800;display:flex;align-items:center;justify-content:center;
+}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:26px;align-items:start}
+.two-col img.rund{border-radius:var(--radius);box-shadow:var(--shadow-lg);width:100%;height:100%;object-fit:cover;min-height:260px}
+
+/* ---------- FAQ ---------- */
+.faq{margin:16px 0 6px}
+.faq details{
+  background:#fff;border:1px solid var(--line);border-radius:12px;
+  margin-bottom:12px;box-shadow:var(--shadow);overflow:hidden;
+}
+.faq summary{
+  cursor:pointer;font-weight:700;color:var(--petrol);
+  padding:17px 20px;font-size:1.06rem;list-style:none;position:relative;padding-right:48px;
+}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{
+  content:"+";position:absolute;right:18px;top:50%;transform:translateY(-50%);
+  font-size:1.5rem;font-weight:800;color:var(--accent);
+}
+.faq details[open ] summary::after{content:"–"}
+.faq details p{padding:0 20px 17px;margin:0;color:var(--muted)}
+
+/* ---------- Kontakt / Fuß ---------- */
+.contact-big{font-size:1.9rem;font-weight:800;color:#fff}
+footer.site{
+  margin-top:0;background:var(--petrol-dark);color:#c9d8d2;
+  padding:34px 0 90px;font-size:.98rem;
+}
+footer.site nav{display:flex;gap:18px;flex-wrap:wrap;margin-bottom:12px}
+footer.site a{color:#e7f0ec;font-weight:600}
+footer.site .f-brand{color:#fff;font-weight:800;font-size:1.1rem}
+
+/* ---------- Feste Leiste unten (nur Handy) ---------- */
+.mobile-bar{display:none}
+@media (max-width:760px){
+  body{font-size:17px}
+  h1{font-size:1.8rem}
+  .hero-sm h1{font-size:1.6rem}
+  h2{font-size:1.45rem}
+  .hero .wrap{padding-top:46px;padding-bottom:46px}
+  nav.main{display:none}
+  .two-col{grid-template-columns:1fr}
+  .contact-big{font-size:1.5rem}
+  .mobile-bar{
+    display:flex;position:fixed;left:0;right:0;bottom:0;z-index:80;
+    background:var(--petrol-dark);padding:9px 10px;gap:9px;
+    box-shadow:0 -4px 18px rgba(0,0,0,.3);
+  }
+  .mobile-bar a{
+    flex:1;text-align:center;padding:13px 6px;border-radius:10px;
+    font-weight:800;color:#fff;font-size:1rem;
+  }
+  .mobile-bar a.mb-call{background:#fff;color:var(--petrol)}
+  .mobile-bar a.mb-wa{background:var(--wa)}
+  .mobile-bar a:hover{text-decoration:none}
+}

@@ -25,6 +25,7 @@
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
+html,body{overflow-x:clip}
 body{
   margin:0;
   font-family:-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
@@ -228,6 +229,8 @@ footer.site .f-brand{color:#fff;font-weight:800;font-size:1.1rem}
   .hero-sm h1{font-size:1.6rem}
   h2{font-size:1.45rem}
   .hero .wrap{padding-top:46px;padding-bottom:46px}
+  .hero::after{background:linear-gradient(180deg,rgba(11,36,35,.90) 0%,rgba(11,36,35,.84) 100%)}
+  .hero p.lead{color:#ffffff}
   nav.main{display:none}
   .two-col{grid-template-columns:1fr}
   .contact-big{font-size:1.5rem}
